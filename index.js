@@ -26,9 +26,15 @@ function playQuiz (question, answer) {
 
 var userName = readlineSync.question("What is your name? ")
 console.log("Welcome " + userName)
-console.log("This is quiz about Thomas Alex")
+console.log("This is quiz about Thomas Alex \n")
 
 for (var i = 0; i < 3; i++) {
   playQuiz(questions[i].question, questions[i].answer)
+}
+
+if (points >= 2) {
+  console.log("Congratulations " + userName +"!")
+} else {
+  console.log("Better luck next time!")
 }
 console.log ("Your final score is: ", points)
